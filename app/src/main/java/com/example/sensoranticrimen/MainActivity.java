@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
 
         mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        if (mTemperature == null) {
-        } else {
+        if (mProximity != null) {
             distanceLabel.setText(NOT_SUPPORTED_MESSAGE2);
             mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
         }
